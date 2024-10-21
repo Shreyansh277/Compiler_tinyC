@@ -1,0 +1,172 @@
+<Comments,// Single-line comment: This is a sample tinyC test file.>
+
+<Comments,/*
+ * Multi-line comment: This file tests all lexical elements
+ * specified for tinyC.
+ */>
+
+<Keyword,int> <Identifier,main><Punctuator,(><Punctuator,)> <Punctuator,{>
+    <Comments,// Keywords>
+    <Keyword,auto> <Keyword,int>_<Identifier,var> <Punctuator,=> <Constant,10><Punctuator,;>
+    <Keyword,char><Punctuator,*> <Identifier,gdf> <Punctuator,=> <String_literal,"bch3b\tc3b\n"><Punctuator,;>
+    <Keyword,const> <Keyword,float> <Identifier,pi> <Punctuator,=> <Constant,3.14><Punctuator,;>
+    <Keyword,if> <Punctuator,(><Keyword,int>_<Identifier,var> <Punctuator,>> 0<Punctuator,)> <Punctuator,{>
+        <Keyword,return> 0<Punctuator,;>
+    <Punctuator,}> <Keyword,else> <Punctuator,{>
+        <Keyword,break><Punctuator,;>
+    <Punctuator,}>
+
+    <Comments,// Identifiers>
+    <Keyword,int> <Identifier,variable1> <Punctuator,=> <Constant,100><Punctuator,;>
+    <Keyword,char> <Identifier,my>_<Keyword,char> <Punctuator,=> <Constant,'A'><Punctuator,;>
+
+    <Comments,// Integer constant>
+    <Keyword,unsigned> <Keyword,long> <Identifier,number> <Punctuator,=> <Constant,42><Punctuator,;>
+    
+    <Comments,// Floating constant>
+    <Keyword,double> <Identifier,decimal> <Punctuator,=> <Constant,2.71828><Punctuator,;>
+    
+    <Comments,// Character constant>
+    <Keyword,char> <Identifier,newline> <Punctuator,=> <Constant,'\n'><Punctuator,;>
+    
+    <Comments,// String literal>
+    <Keyword,char><Punctuator,*> <Identifier,greeting> <Punctuator,=> <String_literal,"Hello, tinyC!"><Punctuator,;>
+    
+    <Comments,// Punctuators>
+    <Keyword,int> <Punctuator,*><Identifier,ptr> <Punctuator,=> <Punctuator,&><Identifier,variable1><Punctuator,;>
+    <Identifier,variable1> <Punctuator,+=> <Constant,5><Punctuator,;>
+    <Keyword,int> <Identifier,result> <Punctuator,=> <Punctuator,(><Identifier,variable1> <Punctuator,>> <Constant,10><Punctuator,)> <Punctuator,?> <Identifier,variable1> <Punctuator,:> <Constant,10><Punctuator,;>
+
+    <Comments,// Comments>
+    <Comments,// Single-line comment example>
+    <Comments,/* Multi-line comment example */>
+
+    <Comments,// Testing all keywords>
+    <Keyword,enum> <Identifier,Color> <Punctuator,{> <Identifier,RED><Punctuator,,> <Identifier,GREEN><Punctuator,,> <Identifier,BLUE> <Punctuator,}><Punctuator,;>
+    <Keyword,register> <Keyword,int> <Identifier,r> <Punctuator,=> <Constant,5><Punctuator,;>
+    <Keyword,static> <Keyword,int> <Identifier,s> <Punctuator,=> <Constant,10><Punctuator,;>
+    <Keyword,volatile> <Keyword,int> <Identifier,v> <Punctuator,=> <Constant,15><Punctuator,;>
+
+    <Comments,// Testing all punctuators>
+    <Keyword,int> <Identifier,arr><Punctuator,[><Constant,5><Punctuator,]> <Punctuator,=> <Punctuator,{><Constant,1><Punctuator,,> <Constant,2><Punctuator,,> <Constant,3><Punctuator,,> <Constant,4><Punctuator,,> <Constant,5><Punctuator,}><Punctuator,;>
+    <Keyword,int> <Identifier,increment> <Punctuator,=> <Punctuator,++><Identifier,variable1><Punctuator,;>
+    <Keyword,int> <Identifier,decrement> <Punctuator,=> <Punctuator,--><Identifier,variable1><Punctuator,;>
+    <Identifier,ptr> <Punctuator,=> <Punctuator,&><Identifier,arr><Punctuator,[>0<Punctuator,]><Punctuator,;>
+    <Punctuator,*><Identifier,ptr> <Punctuator,=> <Punctuator,*><Identifier,ptr> <Punctuator,+> <Constant,1><Punctuator,;>
+    <Identifier,increment> <Punctuator,*=> <Constant,2><Punctuator,;>
+    <Keyword,int> <Identifier,division> <Punctuator,=> <Identifier,increment> <Punctuator,/> <Constant,3><Punctuator,;>
+    <Keyword,int> <Identifier,modulus> <Punctuator,=> <Identifier,division> <Punctuator,%> <Constant,2><Punctuator,;>
+    <Keyword,int> <Identifier,shift>_<Identifier,left> <Punctuator,=> <Identifier,modulus> <Punctuator,<<> <Constant,1><Punctuator,;>
+    <Keyword,int> <Identifier,shift>_<Identifier,right> <Punctuator,=> <Identifier,shift>_<Identifier,left> <Punctuator,>>> <Constant,1><Punctuator,;>
+    <Keyword,int> <Identifier,less>_<Identifier,than> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,<> <Constant,10><Punctuator,;>
+    <Keyword,int> <Identifier,greater>_<Identifier,than> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,>> <Constant,5><Punctuator,;>
+    <Keyword,int> <Identifier,less>_<Identifier,equal> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,<=> <Constant,5><Punctuator,;>
+    <Keyword,int> <Identifier,greater>_<Identifier,equal> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,>=> <Constant,5><Punctuator,;>
+    <Keyword,int> <Identifier,equal> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,==> <Constant,5><Punctuator,;>
+    <Keyword,int> <Identifier,not>_<Identifier,equal> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,!=> <Constant,4><Punctuator,;>
+    <Keyword,int> <Identifier,bitwise>_<Identifier,and> <Punctuator,=> <Identifier,shift>_<Identifier,right> <Punctuator,&> <Constant,2><Punctuator,;>
+    <Keyword,int> <Identifier,bitwise>_<Identifier,xor> <Punctuator,=> <Identifier,bitwise>_<Identifier,and> <Punctuator,^> <Constant,3><Punctuator,;>
+    <Keyword,int> <Identifier,bitwise>_<Identifier,or> <Punctuator,=> <Identifier,bitwise>_<Identifier,xor> <Punctuator,|> <Constant,1><Punctuator,;>
+    <Keyword,int> <Identifier,logical>_<Identifier,and> <Punctuator,=> <Identifier,bitwise>_<Identifier,or> <Punctuator,&&> <Constant,1><Punctuator,;>
+    <Keyword,int> <Identifier,logical>_<Identifier,or> <Punctuator,=> <Identifier,logical>_<Identifier,and> <Punctuator,||> 0<Punctuator,;>
+    <Keyword,int> <Identifier,ternary> <Punctuator,=> <Identifier,logical>_<Identifier,or> <Punctuator,?> <Constant,1> <Punctuator,:> 0<Punctuator,;>
+
+    <Keyword,return> 0<Punctuator,;>
+<Punctuator,}>
+
+ Identifiers:
+main 
+var 
+gdf 
+pi 
+variable1 
+my 
+number 
+decimal 
+newline 
+greeting 
+ptr 
+result 
+Color 
+RED 
+GREEN 
+BLUE 
+r 
+s 
+v 
+arr 
+increment 
+decrement 
+division 
+modulus 
+shift 
+left 
+right 
+less 
+than 
+greater 
+equal 
+not 
+bitwise 
+and 
+xor 
+or 
+logical 
+ternary 
+
+ constants:
+10 
+3.14 
+100 
+'A' 
+42 
+2.71828 
+'\n' 
+5 
+5 
+15 
+5 
+1 
+2 
+3 
+4 
+5 
+1 
+2 
+3 
+2 
+1 
+1 
+5 
+5 
+5 
+5 
+4 
+2 
+3 
+1 
+1 
+1 
+
+ comments:
+// Single-line comment: This is a sample tinyC test file. 
+/*
+ * Multi-line comment: This file tests all lexical elements
+ * specified for tinyC.
+ */ 
+// Keywords 
+// Identifiers 
+// Integer constant 
+// Floating constant 
+// Character constant 
+// String literal 
+// Punctuators 
+// Comments 
+// Single-line comment example 
+/* Multi-line comment example */ 
+// Testing all keywords 
+// Testing all punctuators 
+
+ string_literals:
+"bch3b\tc3b\n" 
+"Hello, tinyC!" 
