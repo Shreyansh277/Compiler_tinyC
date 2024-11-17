@@ -136,29 +136,30 @@ void handlePowerOperation(Arg *arg1, Arg *arg2) {
 }
 
 void handleArithmeticOperation(char op, struct argvals *arg1, struct argvals *arg2) {
-    // Load values into registers if they are in memory
+    // Load arg1 into a register if it's in memory
     if (arg1->In_mem == 1) {
-        printf("\tR[1] = MEM[%d];\n", arg1->memorylocation); // Load from memory to R[1]
+        printf("\tR[1] = MEM[%d];\n", arg1->memorylocation); // Load from memory into R[1]
     }
 
+    // Load arg2 into a register if it's in memory
     if (arg2->In_mem == 1) {
-        printf("\tR[2] = MEM[%d];\n", arg2->memorylocation); // Load from memory to R[2]
+        printf("\tR[2] = MEM[%d];\n", arg2->memorylocation); // Load from memory into R[2]
     }
 
-    // Perform arithmetic using registers or memory
-    printf("\tR[%d] = ", (Reg_loc < 12) ? Reg_loc : 0); // Use register if available, otherwise use R[0]
+    // Perform the arithmetic operation
+    printf("\tR[%d] = ", (Reg_loc < 12) ? Reg_loc : 0); // Use available register, otherwise fallback to R[0]
 
-    // Operand 1 (check if it's in memory or a register)
+    // Operand 1: Check if it's in memory or register
     if (arg1->In_mem == 1) {
         printf("R[1]");
     } else {
         printf("R[%d]", arg1->regidx);
     }
 
-    // Operator
+    // Print operator
     printf(" %c ", op);
 
-    // Operand 2 (check if it's in memory or a register)
+    // Operand 2: Check if it's in memory or register
     if (arg2->In_mem == 1) {
         printf("R[2]");
     } else {
@@ -167,6 +168,7 @@ void handleArithmeticOperation(char op, struct argvals *arg1, struct argvals *ar
 
     printf(";\n");
 }
+
 
 
 
